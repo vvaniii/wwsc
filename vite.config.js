@@ -14,12 +14,25 @@ export default defineConfig({
     // element-plus配置插件
     AutoImport({
       resolvers: [ElementPlusResolver()],
-      
+      //指定自动导入的包
+      imports: ['vue', 'vue-router', 'pinia'],
+      //文件地址
+      dts: './src/types/auto-imports.d.ts',
+      //指定目录，目录的模块会被自动导入
+      dirs: ['./src/**/*'],
+      //是否支持在vue模板中使用
+      vueTemplate: true
+
+
     }),
     Components({
+      //自定义组件
+      dirs: ['./src/components', './src/views'],
+      dts: './src/types/components.d.ts',
       resolvers: [
         // 1. 配置elementPlus采用sass样式配色系统
         ElementPlusResolver({ importStyle: "sass" }),
+
       ],
     }),
   ],
