@@ -1,6 +1,7 @@
 <script setup></script>
 
 <template>
+  <LayoutFixed></LayoutFixed>
   <LayoutNav></LayoutNav>
   <LayoutHeader></LayoutHeader>
   <RouterView />

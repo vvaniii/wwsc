@@ -17,6 +17,7 @@ declare module 'vue' {
     IconTooling: typeof import('./../components/icons/IconTooling.vue')['default']
     LayouNav: typeof import('./../views/Layout/components/LayouNav.vue')['default']
     Layout: typeof import('./../views/Layout/index.vue')['default']
+    LayoutFixed: typeof import('./../views/Layout/components/LayoutFixed.vue')['default']
     LayoutFooter: typeof import('./../views/Layout/components/LayoutFooter.vue')['default']
     LayoutHeader: typeof import('./../views/Layout/components/LayoutHeader.vue')['default']
     Login: typeof import('./../views/Login/index.vue')['default']

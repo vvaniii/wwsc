@@ -15,7 +15,7 @@ export default defineConfig({
     AutoImport({
       resolvers: [ElementPlusResolver()],
       //指定自动导入的包
-      imports: ['vue', 'vue-router', 'pinia'],
+      imports: ['vue', 'vue-router', 'pinia', '@vueuse/core'],
       //文件地址
       dts: './src/types/auto-imports.d.ts',
       //指定目录，目录的模块会被自动导入
