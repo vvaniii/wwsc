@@ -1,7 +1,13 @@
 <script setup></script>
 
 <template>
-  <h1 style="height: 1500px">我是home页面</h1>
+  <div class="container">
+    <HomeCategory></HomeCategory>
+    <HomeBanner></HomeBanner>
+  </div>
+  <home-new></home-new>
+  <home-hot></home-hot>
+  <home-product></home-product>
 </template>
 
 <style scoped></style>

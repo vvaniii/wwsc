@@ -8,8 +8,14 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Category: typeof import('./../views/Category/index.vue')['default']
+    copy: typeof import('./../views/Home/components/HomeCategory copy.vue')['default']
     HelloWorld: typeof import('./../components/HelloWorld.vue')['default']
     Home: typeof import('./../views/Home/index.vue')['default']
+    HomeBanner: typeof import('./../views/Home/components/HomeBanner.vue')['default']
+    HomeCategory: typeof import('./../views/Home/components/HomeCategory.vue')['default']
+    HomeHot: typeof import('./../views/Home/components/HomeHot.vue')['default']
+    HomeNew: typeof import('./../views/Home/components/HomeNew.vue')['default']
+    HomeProduct: typeof import('./../views/Home/components/HomeProduct.vue')['default']
     IconCommunity: typeof import('./../components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./../components/icons/IconDocumentation.vue')['default']
     IconEcosystem: typeof import('./../components/icons/IconEcosystem.vue')['default']
