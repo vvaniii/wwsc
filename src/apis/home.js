@@ -11,3 +11,9 @@ export function getNewAPI() {
     return http.get('home/new')
 
 }
+
+export function getHotAPI() {
+
+    return http.get('home/hot')
+
+}
