@@ -1,5 +1,7 @@
 <script setup></script>
 
-<template>人气推荐</template>
+<template>
+  <home-panel title="人气推荐" sub-title="人气爆款不容错过"></home-panel>
+</template>
 
 <style scoped></style>

@@ -18,6 +18,7 @@ declare module 'vue' {
     HomeCategory: typeof import('./../views/Home/components/HomeCategory.vue')['default']
     HomeHot: typeof import('./../views/Home/components/HomeHot.vue')['default']
     HomeNew: typeof import('./../views/Home/components/HomeNew.vue')['default']
+    HomePanel: typeof import('./../views/Home/components/HomePanel.vue')['default']
     HomeProduct: typeof import('./../views/Home/components/HomeProduct.vue')['default']
     IconCommunity: typeof import('./../components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./../components/icons/IconDocumentation.vue')['default']
