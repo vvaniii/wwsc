@@ -40,6 +40,7 @@ declare global {
   const getCategoryAPI: typeof import('../apis/layout.js')['getCategoryAPI']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
+  const getNewAPI: typeof import('../apis/home.js')['getNewAPI']
   const h: typeof import('vue')['h']
   const http: typeof import('../utils/http.js')['default']
   const ignorableWatch: typeof import('@vueuse/core')['ignorableWatch']
@@ -348,6 +349,7 @@ declare module 'vue' {
     readonly getCategoryAPI: UnwrapRef<typeof import('../apis/layout.js')['getCategoryAPI']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
+    readonly getNewAPI: UnwrapRef<typeof import('../apis/home.js')['getNewAPI']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly http: UnwrapRef<typeof import('../utils/http.js')['default']>
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
@@ -648,6 +650,7 @@ declare module '@vue/runtime-core' {
     readonly getCategoryAPI: UnwrapRef<typeof import('../apis/layout.js')['getCategoryAPI']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
+    readonly getNewAPI: UnwrapRef<typeof import('../apis/home.js')['getNewAPI']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly http: UnwrapRef<typeof import('../utils/http.js')['default']>
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
