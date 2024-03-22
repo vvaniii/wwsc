@@ -2,7 +2,7 @@
 
 <template>
   <LayoutFixed></LayoutFixed>
-  <LayoutNav></LayoutNav>
+  <LayouNav></LayouNav>
   <LayoutHeader></LayoutHeader>
   <RouterView />
   <LayoutFooter></LayoutFooter>

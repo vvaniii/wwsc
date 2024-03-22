@@ -9,6 +9,9 @@ declare module 'vue' {
   export interface GlobalComponents {
     Category: typeof import('./../views/Category/index.vue')['default']
     copy: typeof import('./../views/Home/components/HomeCategory copy.vue')['default']
+    ElCarousel: typeof import('element-plus/es')['ElCarousel']
+    ElCarouselItem: typeof import('element-plus/es')['ElCarouselItem']
+    ElPopconfirm: typeof import('element-plus/es')['ElPopconfirm']
     HelloWorld: typeof import('./../components/HelloWorld.vue')['default']
     Home: typeof import('./../views/Home/index.vue')['default']
     HomeBanner: typeof import('./../views/Home/components/HomeBanner.vue')['default']
