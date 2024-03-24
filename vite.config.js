@@ -27,7 +27,7 @@ export default defineConfig({
     }),
     Components({
       //自定义组件
-      dirs: ['./src/components', './src/views', './src/apis'],
+      dirs: ['./src/components', './src/views', './src/apis', './src/Home'],
       dts: './src/types/components.d.ts',
       resolvers: [
         // 1. 配置elementPlus采用sass样式配色系统
