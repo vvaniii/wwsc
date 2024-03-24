@@ -12,6 +12,8 @@ declare module 'vue' {
     ElCarousel: typeof import('element-plus/es')['ElCarousel']
     ElCarouselItem: typeof import('element-plus/es')['ElCarouselItem']
     ElPopconfirm: typeof import('element-plus/es')['ElPopconfirm']
+    Gooditem: typeof import('./../views/Home/components/Gooditem.vue')['default']
+    GoodItem: typeof import('./../views/Home/components/GoodItem.vue')['default']
     HelloWorld: typeof import('./../components/HelloWorld.vue')['default']
     Home: typeof import('./../views/Home/index.vue')['default']
     HomeBanner: typeof import('./../views/Home/components/HomeBanner.vue')['default']
