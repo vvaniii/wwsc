@@ -17,3 +17,7 @@ export function getHotAPI() {
     return http.get('home/hot')
 
 }
+
+export function getGoodsAPI() {
+    return http.get('home/goods')
+}
