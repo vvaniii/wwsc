@@ -4,7 +4,8 @@
   <LayoutFixed></LayoutFixed>
   <LayouNav></LayouNav>
   <LayoutHeader></LayoutHeader>
-  <RouterView />
+  <!-- <RouterView :key="$route.fullPath" /> -->
+  <router-view></router-view>
   <LayoutFooter></LayoutFooter>
 </template>
 

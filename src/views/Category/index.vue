@@ -1,12 +1,27 @@
 <script setup>
 const categoryData = ref({});
 const route = useRoute();
-const getCategory = async () => {
-  const res = await getTopCategoryAPI(route.params.id);
-
-  categoryData.value = res.result;
+const getCategory = async (id) => {
+  try {
+    const res = await getTopCategoryAPI(id);
+    categoryData.value = res.result;
+  } catch (error) {
+    console.error("错误：", error);
+  }
 };
-onMounted(() => getCategory());
+onMounted(() => {
+  return getCategory(route.params?.id);
+});
+
+watch(
+  () => route.params,
+  async (newParams, oldParams) => {
+    if (newParams.id !== oldParams.id) {
+      await nextTick();
+      getCategory(newParams.id);
+    }
+  }
+);
 
 //轮播图
 const bannerList = ref([]);
@@ -68,7 +83,7 @@ onMounted(() => getBanner());
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .home-banner {
   width: 1240px;
   height: 500px;
