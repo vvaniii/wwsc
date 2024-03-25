@@ -38,6 +38,8 @@ declare global {
   const getActivePinia: typeof import('pinia')['getActivePinia']
   const getBannerAPI: typeof import('../apis/home.js')['getBannerAPI']
   const getCategoryAPI: typeof import('../apis/layout.js')['getCategoryAPI']
+  const getCategoryFilterAPI: typeof import('../apis/catagory.js')['getCategoryFilterAPI']
+  const getCategoryFilterApI: typeof import('../apis/catagory.js')['getCategoryFilterApI']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
   const getGoodsAPI: typeof import('../apis/home.js')['getGoodsAPI']
@@ -352,6 +354,7 @@ declare module 'vue' {
     readonly getActivePinia: UnwrapRef<typeof import('pinia')['getActivePinia']>
     readonly getBannerAPI: UnwrapRef<typeof import('../apis/home.js')['getBannerAPI']>
     readonly getCategoryAPI: UnwrapRef<typeof import('../apis/layout.js')['getCategoryAPI']>
+    readonly getCategoryFilterAPI: UnwrapRef<typeof import('../apis/catagory.js')['getCategoryFilterAPI']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly getGoodsAPI: UnwrapRef<typeof import('../apis/home.js')['getGoodsAPI']>
@@ -658,6 +661,7 @@ declare module '@vue/runtime-core' {
     readonly getActivePinia: UnwrapRef<typeof import('pinia')['getActivePinia']>
     readonly getBannerAPI: UnwrapRef<typeof import('../apis/home.js')['getBannerAPI']>
     readonly getCategoryAPI: UnwrapRef<typeof import('../apis/layout.js')['getCategoryAPI']>
+    readonly getCategoryFilterAPI: UnwrapRef<typeof import('../apis/catagory.js')['getCategoryFilterAPI']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly getGoodsAPI: UnwrapRef<typeof import('../apis/home.js')['getGoodsAPI']>
