@@ -1,36 +1,8 @@
 <script setup>
-const categoryData = ref({});
-const route = useRoute();
-const getCategory = async (id) => {
-  try {
-    const res = await getTopCategoryAPI(id);
-    categoryData.value = res.result;
-  } catch (error) {
-    console.error("错误：", error);
-  }
-};
-onMounted(() => {
-  return getCategory(route.params?.id);
-});
-
-watch(
-  () => route.params,
-  async (newParams, oldParams) => {
-    if (newParams.id !== oldParams.id) {
-      await nextTick();
-      getCategory(newParams.id);
-    }
-  }
-);
+const { categoryData } = useCateGory();
 
 //轮播图
-const bannerList = ref([]);
-
-const getBanner = async () => {
-  const res = await getBannerAPI("2");
-  bannerList.value = res.result;
-};
-onMounted(() => getBanner());
+const { bannerList } = useBanner();
 </script>
 
 <template>
