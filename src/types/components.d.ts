@@ -34,6 +34,7 @@ declare module 'vue' {
     IconEcosystem: typeof import('./../components/icons/IconEcosystem.vue')['default']
     IconSupport: typeof import('./../components/icons/IconSupport.vue')['default']
     IconTooling: typeof import('./../components/icons/IconTooling.vue')['default']
+    ImgView: typeof import('./../components/imgView/index.vue')['default']
     LayouNav: typeof import('./../views/Layout/components/LayouNav.vue')['default']
     Layout: typeof import('./../views/Layout/index.vue')['default']
     LayoutFixed: typeof import('./../views/Layout/components/LayoutFixed.vue')['default']

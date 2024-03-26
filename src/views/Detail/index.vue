@@ -1,6 +1,5 @@
 <script setup>
-import { getDetail } from "@/apis/detail";
-import { useRoute } from "vue-router";
+import imgView from "@/components/imgView/index.vue";
 
 const goods = ref({});
 const route = useRoute();
@@ -36,6 +35,7 @@ onMounted(() => getGoods());
           <div class="goods-info">
             <div class="media">
               <!-- 图片预览区 -->
+              <imgView></imgView>
 
               <!-- 统计数量 -->
               <ul class="goods-sales">
