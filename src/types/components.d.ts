@@ -43,4 +43,7 @@ declare module 'vue' {
     TheWelcome: typeof import('./../components/TheWelcome.vue')['default']
     WelcomeItem: typeof import('./../components/WelcomeItem.vue')['default']
   }
+  export interface ComponentCustomProperties {
+    vInfiniteScroll: typeof import('element-plus/es')['ElInfiniteScroll']
+  }
 }
