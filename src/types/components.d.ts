@@ -10,6 +10,7 @@ declare module 'vue' {
     Category: typeof import('./../views/Category/index.vue')['default']
     copy: typeof import('./../views/Home/components/HomeCategory copy.vue')['default']
     Detail: typeof import('./../views/Detail/index.vue')['default']
+    DetailHot: typeof import('./../views/Detail/components/DetailHot.vue')['default']
     ElBreadcrumb: typeof import('element-plus/es')['ElBreadcrumb']
     ElBreadcrumbItem: typeof import('element-plus/es')['ElBreadcrumbItem']
     ElButton: typeof import('element-plus/es')['ElButton']
