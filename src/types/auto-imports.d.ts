@@ -45,6 +45,7 @@ declare global {
   const getGoodsAPI: typeof import('../apis/home.js')['getGoodsAPI']
   const getHotAPI: typeof import('../apis/home.js')['getHotAPI']
   const getNewAPI: typeof import('../apis/home.js')['getNewAPI']
+  const getSubCategoryAPI: typeof import('../apis/catagory.js')['getSubCategoryAPI']
   const getTopCategoryAPI: typeof import('../apis/catagory.js')['getTopCategoryAPI']
   const h: typeof import('vue')['h']
   const http: typeof import('../utils/http.js')['default']
@@ -360,6 +361,7 @@ declare module 'vue' {
     readonly getGoodsAPI: UnwrapRef<typeof import('../apis/home.js')['getGoodsAPI']>
     readonly getHotAPI: UnwrapRef<typeof import('../apis/home.js')['getHotAPI']>
     readonly getNewAPI: UnwrapRef<typeof import('../apis/home.js')['getNewAPI']>
+    readonly getSubCategoryAPI: UnwrapRef<typeof import('../apis/catagory.js')['getSubCategoryAPI']>
     readonly getTopCategoryAPI: UnwrapRef<typeof import('../apis/catagory.js')['getTopCategoryAPI']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly http: UnwrapRef<typeof import('../utils/http.js')['default']>
@@ -667,6 +669,7 @@ declare module '@vue/runtime-core' {
     readonly getGoodsAPI: UnwrapRef<typeof import('../apis/home.js')['getGoodsAPI']>
     readonly getHotAPI: UnwrapRef<typeof import('../apis/home.js')['getHotAPI']>
     readonly getNewAPI: UnwrapRef<typeof import('../apis/home.js')['getNewAPI']>
+    readonly getSubCategoryAPI: UnwrapRef<typeof import('../apis/catagory.js')['getSubCategoryAPI']>
     readonly getTopCategoryAPI: UnwrapRef<typeof import('../apis/catagory.js')['getTopCategoryAPI']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly http: UnwrapRef<typeof import('../utils/http.js')['default']>

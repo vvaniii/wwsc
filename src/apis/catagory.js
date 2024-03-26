@@ -14,3 +14,7 @@ export function getCategoryFilterAPI(id) {
 
 
 }
+
+export const getSubCategoryAPI = (data) => {
+    return http.post('/category/goods/temporary', data);
+}
