@@ -1,6 +1,4 @@
 <script setup>
-import imgView from "@/components/imgView/index.vue";
-
 const goods = ref({});
 const route = useRoute();
 const getGoods = async () => {
@@ -8,6 +6,10 @@ const getGoods = async () => {
   goods.value = res.result;
 };
 onMounted(() => getGoods());
+
+const skuChange = (sku) => {
+  console.log(sku);
+};
 </script>
 
 <template>
@@ -35,7 +37,7 @@ onMounted(() => getGoods());
           <div class="goods-info">
             <div class="media">
               <!-- 图片预览区 -->
-              <imgView :image-list="goods.mainPictures"></imgView>
+              <ImageView :image-list="goods.mainPictures"></ImageView>
 
               <!-- 统计数量 -->
               <ul class="goods-sales">
@@ -85,6 +87,7 @@ onMounted(() => getGoods());
                 </dl>
               </div>
               <!-- sku组件 -->
+              <Sku :goods="goods" @change="skuChange"></Sku>
 
               <!-- 数据组件 -->
 
