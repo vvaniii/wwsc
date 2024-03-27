@@ -1,6 +1,8 @@
 <script setup>
 import { ElMessage } from "element-plus";
 import "element-plus/theme-chalk/el-message.css";
+
+const userStore = useUserStore();
 //准备表单对象
 const form = ref({
   account: "heima293",
@@ -37,15 +39,9 @@ const doLogin = () => {
   formRef.value.validate(async (valid) => {
     if (valid) {
       const { account, password } = form.value;
-
-      try {
-        const res = await loginAPI({ account, password });
-        // console.log(res);
-        ElMessage({ type: "success", message: "登录成功" });
-        router.replace({ path: "/" });
-      } catch (err) {
-        ElMessage({ type: "error", message: "登录失败" });
-      }
+      userStore.getUserInfo({ account, password });
+      ElMessage({ type: "success", message: "登录成功" });
+      router.replace({ path: "/" });
     }
   });
 };
