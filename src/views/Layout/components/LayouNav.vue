@@ -1,5 +1,10 @@
 <script setup>
 const userStore = useUserStore();
+
+const confirm = () => {
+  userStore.clearUserInfo();
+  router.push("/login");
+};
 </script>
 
 <template>
@@ -16,6 +21,7 @@ const userStore = useUserStore();
           <li>
             <el-popconfirm
               title="确认退出吗?"
+              @confirm="confirm"
               confirm-button-text="确认"
               cancel-button-text="取消"
             >
