@@ -7,8 +7,31 @@ const getGoods = async () => {
 };
 onMounted(() => getGoods());
 
+//购物车
+let skuObj = {};
+
 const skuChange = (sku) => {
-  console.log(sku);
+  skuObj = sku;
+};
+const count = ref(1);
+const cartStore = useCartStore();
+const addCart = () => {
+  if (skuObj.skuId) {
+    cartStore.addCart({
+      id: goods.value.id,
+      name: goods.value.name,
+      picture: goods.value.mainPictures[0],
+      price: goods.value.price,
+      count: count.value,
+      skuId: skuObj.skuId,
+      attrsText: skuObj.specsText,
+      selected: true,
+    });
+    console.log(cartStore.cartList);
+  } else {
+    // 规格没有选择 提示用户
+    ElMessage.warning("请选择规格");
+  }
 };
 </script>
 
@@ -90,10 +113,13 @@ const skuChange = (sku) => {
               <Sku :goods="goods" @change="skuChange"></Sku>
 
               <!-- 数据组件 -->
+              <el-input-number v-model="count" min="1"></el-input-number>
 
               <!-- 按钮组件 -->
               <div>
-                <el-button size="large" class="btn"> 加入购物车 </el-button>
+                <el-button size="large" class="btn" @click="addCart">
+                  加入购物车
+                </el-button>
               </div>
             </div>
           </div>
