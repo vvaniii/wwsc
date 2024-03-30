@@ -27,12 +27,21 @@ export const useCartStore = defineStore(
         const allPrice = computed(() => cartList.value.reduce((a, c) => a + c.count * c.price, 0))
         //是否全选计算属性
         const isAll = computed(() => cartList.value.every(item => item.selected))
+        //已选择的数量
+        const selectedCount =
+            computed(() => cartList.value.filter(item => item.selected)
+                .reduce((a, c) => a + c.count, 0))
+        //已选商品价格合计
+        const selectedPrice = computed(() => cartList.value.filter(item => item.selected)
+            .reduce((a, c) => a + c.count * c.price, 0))
         return {
             //属性
             cartList,
             allCount,
             allPrice,
             isAll,
+            selectedCount,
+            selectedPrice,
             //方法
             addCart,
             delCart,
