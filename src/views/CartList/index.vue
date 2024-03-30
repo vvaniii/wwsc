@@ -26,7 +26,10 @@ const cartStore = useCartStore();
           <tbody>
             <tr v-for="i in cartStore.cartList" :key="i.id">
               <td>
-                <el-checkbox v-model="i.selected" />
+                <el-checkbox
+                  v-model="i.selected"
+                  @change="cartStore.updateCart(i)"
+                />
               </td>
               <td>
                 <div class="goods">
@@ -44,7 +47,11 @@ const cartStore = useCartStore();
                 <p>¥{{ i.price }}</p>
               </td>
               <td class="tc">
-                <el-input-number v-model="i.count" :min="1" />
+                <el-input-number
+                  v-model="i.count"
+                  :min="1"
+                  @change="cartStore.updateCart(i)"
+                />
               </td>
               <td class="tc">
                 <p class="f16 red">¥{{ (i.price * i.count).toFixed(2) }}</p>
@@ -55,7 +62,7 @@ const cartStore = useCartStore();
                     title="确认删除吗?"
                     confirm-button-text="确认"
                     cancel-button-text="取消"
-                    @confirm=""
+                    @confirm="cartStore.delCart(i.skuId)"
                   >
                     <template #reference>
                       <a href="javascript:;">删除</a>
@@ -68,7 +75,9 @@ const cartStore = useCartStore();
               <td colspan="6">
                 <div class="cart-none">
                   <el-empty description="购物车列表为空">
-                    <el-button type="primary">随便逛逛</el-button>
+                    <el-button type="primary" @click="$router.push('/')"
+                      >随便逛逛</el-button
+                    >
                   </el-empty>
                 </div>
               </td>

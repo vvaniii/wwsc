@@ -1,26 +1,62 @@
 
+
+
 export const useCartStore = defineStore(
     'cart',
     () => {
         const cartList = ref([])
-        const addCart = (goods) => {
-            //判断商品是否在购物车
-            const findItem = cartList.value.find(item => goods.skuId === item.sku)
-            if (findItem) {
-                findItem.count += goods.count
-            } else {
-                cartList.value.push(goods)
-            }
+        const userStore = useUserStore()
+        const isLogin = computed(() => userStore.userInfo.token)
+        //获取登录后最新购物车列表action
+        const updateLoginCartList = async () => {
+            const res = await findNewCartListAPI()
+            cartList.value = res.result
         }
-        const delCart = (skuId) => {
-            const index = cartList.value.findIndex(item => skuId === item.sku)
-            cartList.value.splice(index, 1)
+        const addCart = async (goods) => {
+            if (isLogin.value) {
+                await insertCartAPI(goods)
+                await updateLoginCartList()
+
+            } else {
+                //判断商品是否在购物车
+                const findItem = cartList.value.find(item => goods.skuId === item.sku)
+                if (findItem) {
+                    findItem.count += goods.count
+                } else {
+                    cartList.value.push(goods)
+                }
+
+            }
+
+        }
+        // 删除购物项
+        const delCart = async (skuId) => {
+            if (isLogin.value) {
+                //登录之后加入购物车逻辑
+                await delCartAPI([skuId])
+                await updateLoginCartList()
+            } else {
+
+                const idx = cartList.value.findIndex((item) => skuId === item.skuId)
+                cartList.value.splice(idx, 1)
+            }
         }
         //全选功能
         const checKAll = (selected) => {
             cartList.value.forEach(item => item.selected = selected)
-
         }
+        //清除购物车
+        const clearCart = () => {
+            cartList.value = []
+        }
+        //修改购物项
+        const updateCart = async (goods) => {
+            const { skuId, count, selected } = goods
+            if (isLogin.value) {
+                await updateCartItem(skuId, { count, selected })
+            }
+        }
+
         //总数量 所有项的count总和
         const allCount = computed(() => cartList.value.reduce((a, c) => a + c.count, 0))
         //总价 所有项的count*price 之和
@@ -46,6 +82,9 @@ export const useCartStore = defineStore(
             addCart,
             delCart,
             checKAll,
+            updateLoginCartList,
+            clearCart,
+            updateCart,
 
         }
     },

@@ -25,7 +25,7 @@ http.interceptors.request.use(config => {
 // 一般进行错误的统一提示，token失效的处理等
 http.interceptors.response.use(res => res.data, e => {
     //统一的错误提示
-    ElMessage({ type: "error", message: e.response.data.message });
+    ElMessage({ type: "error", message: e?.response?.data?.message });
     //401token失效处理
     const userStore = useUserStore();
     if (e.response.status === 401) {

@@ -1,8 +1,10 @@
 <script setup>
 const userStore = useUserStore();
+const cartStore = useCartStore();
 
 const confirm = () => {
   userStore.clearUserInfo();
+  cartStore.clearCart();
   router.push("/login");
 };
 </script>
