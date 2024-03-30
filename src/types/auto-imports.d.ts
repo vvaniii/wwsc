@@ -44,6 +44,7 @@ declare global {
   const getCategoryAPI: typeof import('../apis/layout.js')['getCategoryAPI']
   const getCategoryFilterAPI: typeof import('../apis/catagory.js')['getCategoryFilterAPI']
   const getCategoryFilterApI: typeof import('../apis/catagory.js')['getCategoryFilterApI']
+  const getCheckInfoAPI: typeof import('../apis/checkout.js')['getCheckInfoAPI']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
   const getDetail: typeof import('../apis/detail.js')['getDetail']
@@ -374,6 +375,7 @@ declare module 'vue' {
     readonly getBannerAPI: UnwrapRef<typeof import('../apis/home.js')['getBannerAPI']>
     readonly getCategoryAPI: UnwrapRef<typeof import('../apis/layout.js')['getCategoryAPI']>
     readonly getCategoryFilterAPI: UnwrapRef<typeof import('../apis/catagory.js')['getCategoryFilterAPI']>
+    readonly getCheckInfoAPI: UnwrapRef<typeof import('../apis/checkout.js')['getCheckInfoAPI']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly getDetail: UnwrapRef<typeof import('../apis/detail.js')['getDetail']>
@@ -696,6 +698,7 @@ declare module '@vue/runtime-core' {
     readonly getBannerAPI: UnwrapRef<typeof import('../apis/home.js')['getBannerAPI']>
     readonly getCategoryAPI: UnwrapRef<typeof import('../apis/layout.js')['getCategoryAPI']>
     readonly getCategoryFilterAPI: UnwrapRef<typeof import('../apis/catagory.js')['getCategoryFilterAPI']>
+    readonly getCheckInfoAPI: UnwrapRef<typeof import('../apis/checkout.js')['getCheckInfoAPI']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly getDetail: UnwrapRef<typeof import('../apis/detail.js')['getDetail']>
