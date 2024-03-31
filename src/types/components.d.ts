@@ -25,6 +25,7 @@ declare module 'vue' {
     ElFormItem: typeof import('element-plus/es')['ElFormItem']
     ElInput: typeof import('element-plus/es')['ElInput']
     ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
+    ElPagination: typeof import('element-plus/es')['ElPagination']
     ElPopconfirm: typeof import('element-plus/es')['ElPopconfirm']
     ElTabPane: typeof import('element-plus/es')['ElTabPane']
     ElTabs: typeof import('element-plus/es')['ElTabs']
@@ -54,6 +55,7 @@ declare module 'vue' {
     LayoutHander: typeof import('./../views/Layout/components/LayoutHander.vue')['default']
     LayoutHeader: typeof import('./../views/Layout/components/LayoutHeader.vue')['default']
     Login: typeof import('./../views/Login/index.vue')['default']
+    Member: typeof import('./../views/Member/index.vue')['default']
     Pay: typeof import('./../views/Pay/index.vue')['default']
     PayBack: typeof import('./../views/Pay/PayBack.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
@@ -61,6 +63,10 @@ declare module 'vue' {
     Sku: typeof import('./../components/sku/index.vue')['default']
     SubCategory: typeof import('./../views/subCategory/index.vue')['default']
     TheWelcome: typeof import('./../components/TheWelcome.vue')['default']
+    UserInfo: typeof import('./../views/Member/components/UserInfo.vue')['default']
+    UserInfor: typeof import('./../views/Member/components/userInfor.vue')['default']
+    UserOder: typeof import('./../views/Member/components/userOder.vue')['default']
+    UserOrder: typeof import('./../views/Member/components/UserOrder.vue')['default']
     WelcomeItem: typeof import('./../components/WelcomeItem.vue')['default']
   }
   export interface ComponentCustomProperties {
