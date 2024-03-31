@@ -57,6 +57,7 @@ declare global {
   const getOrderAPI: typeof import('../apis/pay.js')['getOrderAPI']
   const getSubCategoryAPI: typeof import('../apis/catagory.js')['getSubCategoryAPI']
   const getTopCategoryAPI: typeof import('../apis/catagory.js')['getTopCategoryAPI']
+  const getUserOrder: typeof import('../apis/order.js')['getUserOrder']
   const h: typeof import('vue')['h']
   const http: typeof import('../utils/http.js')['default']
   const ignorableWatch: typeof import('@vueuse/core')['ignorableWatch']
@@ -392,6 +393,7 @@ declare module 'vue' {
     readonly getOrderAPI: UnwrapRef<typeof import('../apis/pay.js')['getOrderAPI']>
     readonly getSubCategoryAPI: UnwrapRef<typeof import('../apis/catagory.js')['getSubCategoryAPI']>
     readonly getTopCategoryAPI: UnwrapRef<typeof import('../apis/catagory.js')['getTopCategoryAPI']>
+    readonly getUserOrder: UnwrapRef<typeof import('../apis/order.js')['getUserOrder']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly http: UnwrapRef<typeof import('../utils/http.js')['default']>
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
@@ -718,6 +720,7 @@ declare module '@vue/runtime-core' {
     readonly getOrderAPI: UnwrapRef<typeof import('../apis/pay.js')['getOrderAPI']>
     readonly getSubCategoryAPI: UnwrapRef<typeof import('../apis/catagory.js')['getSubCategoryAPI']>
     readonly getTopCategoryAPI: UnwrapRef<typeof import('../apis/catagory.js')['getTopCategoryAPI']>
+    readonly getUserOrder: UnwrapRef<typeof import('../apis/order.js')['getUserOrder']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly http: UnwrapRef<typeof import('../utils/http.js')['default']>
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
