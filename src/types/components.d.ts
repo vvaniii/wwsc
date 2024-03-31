@@ -55,6 +55,7 @@ declare module 'vue' {
     LayoutHeader: typeof import('./../views/Layout/components/LayoutHeader.vue')['default']
     Login: typeof import('./../views/Login/index.vue')['default']
     Pay: typeof import('./../views/Pay/index.vue')['default']
+    PayBack: typeof import('./../views/Pay/PayBack.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Sku: typeof import('./../components/sku/index.vue')['default']
