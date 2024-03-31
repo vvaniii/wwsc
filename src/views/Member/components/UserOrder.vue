@@ -16,11 +16,22 @@ const params = ref({
   page: 1,
   pageSize: 2,
 });
+const total = ref(0);
 const getOrderList = async () => {
   const res = await getUserOrder(params.value);
   orderList.value = res.result.items;
+  total.value = res.result.counts;
 };
 onMounted(() => getOrderList());
+const pageChange = (page) => {
+  params.value.page = page;
+  getOrderList();
+};
+
+const sizeChange = (size) => {
+  params.value.pageSize = size;
+  getOrderList();
+};
 </script>
 
 <template>
@@ -116,7 +127,17 @@ onMounted(() => getOrderList());
           </div>
           <!-- 分页 -->
           <div class="pagination-container">
-            <el-pagination background layout="prev, pager, next" />
+            <el-pagination
+              background
+              layout="prev, pager, next, sizes"
+              :total="total"
+              :page-size="params.pageSize"
+              @current-change="pageChange"
+              :page-sizes="[2, 5, 10]"
+              @size-change="sizeChange"
+              prev-text="上一页"
+              next-text="下一页"
+            />
           </div>
         </div>
       </div>
