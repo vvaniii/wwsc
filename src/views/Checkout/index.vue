@@ -1,5 +1,5 @@
 <script setup>
-import { getCheckInfoAPI } from "@/apis/checkout";
+import { createOrderAPI, getCheckInfoAPI } from "@/apis/checkout";
 
 // 获取结算信息
 const checkInfo = ref({}); // 订单对象
@@ -27,6 +27,30 @@ const switchAddress = (item) => {
 const confirm = () => {
   curAddress.value = activeAddress.value;
   showDialog.value = false;
+};
+//创建订单
+const createOrder = async () => {
+  const res = await createOrderAPI({
+    deliveryTimeType: 1,
+    payType: 1,
+    payChannel: 1,
+    buyerMessage: "",
+    goods: checkInfo.value.goods.map((item) => {
+      return {
+        skuId: item.skuId,
+        count: item.count,
+      };
+    }),
+    addressId: curAddress.value.id,
+  });
+  const orderId = res.result.id;
+  console.log(orderId);
+  router.push({
+    path: "/pay",
+    query: {
+      id: orderId,
+    },
+  });
 };
 </script>
 
@@ -135,7 +159,9 @@ const confirm = () => {
         </div>
         <!-- 提交订单 -->
         <div class="submit">
-          <el-button type="primary" size="large">提交订单</el-button>
+          <el-button type="primary" size="large" @click="createOrder"
+            >提交订单</el-button
+          >
         </div>
       </div>
     </div>
