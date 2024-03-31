@@ -53,6 +53,7 @@ declare global {
   const getHotAPI: typeof import('../apis/home.js')['getHotAPI']
   const getHotGoodsAPI: typeof import('../apis/detail.js')['getHotGoodsAPI']
   const getNewAPI: typeof import('../apis/home.js')['getNewAPI']
+  const getOrderAPI: typeof import('../apis/pay.js')['getOrderAPI']
   const getSubCategoryAPI: typeof import('../apis/catagory.js')['getSubCategoryAPI']
   const getTopCategoryAPI: typeof import('../apis/catagory.js')['getTopCategoryAPI']
   const h: typeof import('vue')['h']
@@ -176,6 +177,7 @@ declare global {
   const useCloned: typeof import('@vueuse/core')['useCloned']
   const useColorMode: typeof import('@vueuse/core')['useColorMode']
   const useConfirmDialog: typeof import('@vueuse/core')['useConfirmDialog']
+  const useCountDown: typeof import('../utils/useCountDown.js')['useCountDown']
   const useCounter: typeof import('@vueuse/core')['useCounter']
   const useCounterStore: typeof import("../stores/categoryStore.js")["useCounterStore"]
   const useCssModule: typeof import('vue')['useCssModule']
@@ -385,6 +387,7 @@ declare module 'vue' {
     readonly getHotAPI: UnwrapRef<typeof import('../apis/home.js')['getHotAPI']>
     readonly getHotGoodsAPI: UnwrapRef<typeof import('../apis/detail.js')['getHotGoodsAPI']>
     readonly getNewAPI: UnwrapRef<typeof import('../apis/home.js')['getNewAPI']>
+    readonly getOrderAPI: UnwrapRef<typeof import('../apis/pay.js')['getOrderAPI']>
     readonly getSubCategoryAPI: UnwrapRef<typeof import('../apis/catagory.js')['getSubCategoryAPI']>
     readonly getTopCategoryAPI: UnwrapRef<typeof import('../apis/catagory.js')['getTopCategoryAPI']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
@@ -507,6 +510,7 @@ declare module 'vue' {
     readonly useCloned: UnwrapRef<typeof import('@vueuse/core')['useCloned']>
     readonly useColorMode: UnwrapRef<typeof import('@vueuse/core')['useColorMode']>
     readonly useConfirmDialog: UnwrapRef<typeof import('@vueuse/core')['useConfirmDialog']>
+    readonly useCountDown: UnwrapRef<typeof import('../utils/useCountDown.js')['useCountDown']>
     readonly useCounter: UnwrapRef<typeof import('@vueuse/core')['useCounter']>
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
     readonly useCssVar: UnwrapRef<typeof import('@vueuse/core')['useCssVar']>
@@ -708,6 +712,7 @@ declare module '@vue/runtime-core' {
     readonly getHotAPI: UnwrapRef<typeof import('../apis/home.js')['getHotAPI']>
     readonly getHotGoodsAPI: UnwrapRef<typeof import('../apis/detail.js')['getHotGoodsAPI']>
     readonly getNewAPI: UnwrapRef<typeof import('../apis/home.js')['getNewAPI']>
+    readonly getOrderAPI: UnwrapRef<typeof import('../apis/pay.js')['getOrderAPI']>
     readonly getSubCategoryAPI: UnwrapRef<typeof import('../apis/catagory.js')['getSubCategoryAPI']>
     readonly getTopCategoryAPI: UnwrapRef<typeof import('../apis/catagory.js')['getTopCategoryAPI']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
@@ -830,6 +835,7 @@ declare module '@vue/runtime-core' {
     readonly useCloned: UnwrapRef<typeof import('@vueuse/core')['useCloned']>
     readonly useColorMode: UnwrapRef<typeof import('@vueuse/core')['useColorMode']>
     readonly useConfirmDialog: UnwrapRef<typeof import('@vueuse/core')['useConfirmDialog']>
+    readonly useCountDown: UnwrapRef<typeof import('../utils/useCountDown.js')['useCountDown']>
     readonly useCounter: UnwrapRef<typeof import('@vueuse/core')['useCounter']>
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
     readonly useCssVar: UnwrapRef<typeof import('@vueuse/core')['useCssVar']>
