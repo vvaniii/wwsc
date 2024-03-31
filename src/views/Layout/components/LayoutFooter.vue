@@ -6,7 +6,10 @@
         <dl>
           <dt>客户服务</dt>
           <dd><i class="iconfont icon-kefu"></i> 在线客服</dd>
-          <dd><i class="iconfont icon-question"></i> 问题反馈</dd>
+          <dd>
+            <i class="iconfont icon-question"></i>
+            <a href="https://github.com/vvaniii/wwsc/issues">问题反馈</a>
+          </dd>
         </dl>
         <dl>
           <dt>关注我们</dt>
@@ -15,10 +18,10 @@
         </dl>
         <dl>
           <dt>下载APP</dt>
-          <dd class="qrcode"><img src="@/assets/images/qrcode.jpg" /></dd>
+          <dd class="qrcode"><img src="@/assets/images/callme.png" /></dd>
           <dd class="download">
             <span>扫描二维码</span>
-            <span>立马下载APP</span>
+            <span>联系我</span>
             <a href="javascript:;">下载页面</a>
           </dd>
         </dl>
@@ -56,7 +59,7 @@
             <a href="javascript:;">配送与验收</a>
             <a href="javascript:;">商务合作</a>
             <a href="javascript:;">搜索推荐</a>
-            <a href="javascript:;">友情链接</a>
+            <a href="https://github.com/vvaniii/wwsc">友情链接</a>
           </p>
           <p>CopyRight © 旺旺商城</p>
         </div>
