@@ -32,7 +32,7 @@
 
 结构如下
 
-> ![](C:\Users\wei\AppData\Roaming\marktext\images\2024-04-01-15-52-52-image.png)
+> ![](./src/assets/images/mdimg/结构图.png)
 
 项目根目录指向 layout下的index.vue
 
@@ -99,21 +99,27 @@
 
 ## 页面截图
 
-![](C:\Users\wei\AppData\Roaming\marktext\images\2024-04-01-16-00-48-image.png)
+![](./src/assets/images/mdimg/首页.png)
 
-![](C:\Users\wei\AppData\Roaming\marktext\images\2024-04-01-16-02-20-image.png)
+![](./src/assets/images/mdimg/二级目录.png)
 
-![](C:\Users\wei\AppData\Roaming\marktext\images\2024-04-01-16-05-04-image.png)
+![](./src/assets/images/mdimg/三级目录.png)
 
-![](C:\Users\wei\AppData\Roaming\marktext\images\2024-04-01-16-05-52-image.png)
+![](./src/assets/images/mdimg/详情页.png)
+
+![](./src/assets/images/mdimg/购物车.png)
+
+![](./src/assets/images/mdimg/支付信息.png)
+
+![](./src/assets/images/mdimg/支付页.png)
+
+![](./src/assets/images/mdimg/会员中心.jpeg)
+
+![](./src/assets/images/mdimg/会员中心我的订单.jpeg)
 
 
 
-![](C:\Users\wei\AppData\Roaming\marktext\images\2024-04-01-16-06-51-image.png)
 
-![](C:\Users\wei\AppData\Roaming\marktext\images\2024-04-01-16-07-36-image.png)
-
-![](C:\Users\wei\AppData\Roaming\marktext\images\2024-04-01-16-08-33-image.png)
 
 
 
