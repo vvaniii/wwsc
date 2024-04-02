@@ -2,7 +2,7 @@
 
 ## 前言
 
-本项目跟着[b站up主]( https://www.bilibili.com/video/BV1sj411y7XK/?share_source=copy_web&vd_source=5d19091a1d300655bd4b9b3228394642) 视频完成，目的是整合自己学习过的前端知识。项目没有后端及服务器相关内容。后端接口采用[柴柴老师项目接口](https://apifox.com/apidoc/shared-c05cb8d7-e591-4d9c-aff8-11065a0ec1de)  
+本项目跟着 b站up主 视频完成，目的是整合自己学习过的前端知识。项目没有后端及服务器相关内容。后端接口采用[柴柴老师项目接口](https://apifox.com/apidoc/shared-c05cb8d7-e591-4d9c-aff8-11065a0ec1de)  
 
 ## 项目
 
